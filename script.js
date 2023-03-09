@@ -7,7 +7,8 @@ var btnFiveEl = document.getElementById("btnFive")
 var btnSixEl = document.getElementById("btnSix")
 var btnSevenEl = document.getElementById("btnSeven")
 var btnEightEl = document.getElementById("btnEight")
-var mainEL = document.getElementById("main")
+var mainEl = document.getElementById("main")
+var mainUl = document.createElement("ul")
 var userInput = $("#search")
 
 function getApiSearch() {
@@ -16,9 +17,14 @@ function getApiSearch() {
   fetch(requestUrl)
   .then((response) => response.json())
   .then((data) => console.log(data));
-  
-  console.log("Received!!");
+
+  for(let i = 0; i < data.result.length; i++) {
+    var mainUl = document.createElement('li');
+    mainUl.innerHTML = data.result[i].main;
+    mainUl.appendChild(mainEl);
     }
+    console.log("Received!!");
+  }
 
 function getApiOne() {
     var requestUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=33.748997&lon=-84.387985&appid=62b78fd432f4f7c034943f7f3abc8315&units=imperial";
@@ -26,6 +32,12 @@ function getApiOne() {
     fetch(requestUrl)
     .then((response) => response.json())
     .then((data) => console.log(data));
+
+  for(let i = 0; i < data.result.length; i++) {
+    var mainUl = document.createElement('li');
+    mainUl.innerHTML = data.result[i].main;
+    mainUl.appendChild(mainEl);
+    }
     console.log("Received!!");
       }
 
@@ -35,6 +47,11 @@ function getApiTwo() {
   fetch(requestUrl)
   .then((response) => response.json())
   .then((data) => console.log(data));
+  for(let i = 0; i < data.result.length; i++) {
+    var mainUl = document.createElement('li');
+    mainUl.innerHTML = data.result[i].main;
+    mainUl.appendChild(mainEl);
+    }
   console.log("Received!!");
     }
 
@@ -44,6 +61,11 @@ function getApiThree() {
   fetch(requestUrl)
   .then((response) => response.json())
   .then((data) => console.log(data));
+  for(let i = 0; i < data.result.length; i++) {
+    var mainUl = document.createElement('li');
+    mainUl.innerHTML = data.result[i].main;
+    mainUl.appendChild(mainEl);
+    }
   console.log("Received!!");
     }
 
@@ -54,6 +76,11 @@ function getApiFour() {
   fetch(requestUrl)
   .then((response) => response.json())
   .then((data) => console.log(data));
+  for(let i = 0; i < data.result.length; i++) {
+    var mainUl = document.createElement('li');
+    mainUl.innerHTML = data.result[i].main;
+    mainUl.appendChild(mainEl);
+    }
   console.log("Received!!");
     }
 
@@ -64,6 +91,11 @@ function getApiFive() {
   fetch(requestUrl)
   .then((response) => response.json())
   .then((data) => console.log(data));
+  for(let i = 0; i < data.result.length; i++) {
+    var mainUl = document.createElement('li');
+    mainUl.innerHTML = data.result[i].main;
+    mainUl.appendChild(mainEl);
+    }
   console.log("Received!!");
     }
 
@@ -74,6 +106,11 @@ function getApiSix() {
   fetch(requestUrl)
   .then((response) => response.json())
   .then((data) => console.log(data));
+  for(let i = 0; i < data.result.length; i++) {
+    var mainUl = document.createElement('li');
+    mainUl.innerHTML = data.result[i].main;
+    mainUl.appendChild(mainEl);
+    }
   console.log("Received!!");
     }
 
@@ -84,6 +121,11 @@ function getApiSeven() {
   fetch(requestUrl)
   .then((response) => response.json())
   .then((data) => console.log(data));
+  for(let i = 0; i < data.result.length; i++) {
+    var mainUl = document.createElement('li');
+    mainUl.innerHTML = data.result[i].main;
+    mainUl.appendChild(mainEl);
+    }
   console.log("Received!!");
     }
 
@@ -94,6 +136,11 @@ function getApiEight() {
   fetch(requestUrl)
   .then((response) => response.json())
   .then((data) => console.log(data));
+  for(let i = 0; i < data.result.length; i++) {
+    var mainUl = document.createElement('li');
+    mainUl.innerHTML = data.result[i].main;
+    mainUl.appendChild(mainEl);
+    }
   console.log("Received!!");
     }
 
