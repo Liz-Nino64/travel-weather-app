@@ -6,7 +6,7 @@ This webpage allows users to check the weather of their next travel destination.
 ![Screenshot of Website](images/README-Screenshot1.png)
 
 ## Installation
-This webpage is accessible at 
+This webpage is accessible at https://liz-nino64.github.io/travel-weather-app/
 
 ## License
 Licensed under the MIT License
