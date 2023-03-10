@@ -14,17 +14,17 @@ var userInput = $("#search")
 function getApiSearch() {
   var requestUrl = "https://api.openweathermap.org/data/2.5/forecast?q=" + userInput.val() + "&appid=62b78fd432f4f7c034943f7f3abc8315&units=imperial";
 // Search bar
-  fetch(requestUrl)
-  .then((response) => response.json())
-  .then((data) => console.log(data));
-
+fetch(requestUrl)
+.then((response) => response.json())
+.then((data) => {
   for(let i = 0; i < data.result.length; i++) {
-    var mainUl = document.createElement('li');
-    mainUl.innerHTML = data.result[i].main;
-    mainUl.appendChild(mainEl);
-    }
-    console.log("Received!!");
+    var mainLi = document.createElement('li');
+    mainLi.innerHTML = data.result[i].main;
+    mainLi.appendChild(mainUl);
   }
+  console.log("Received!!");
+});
+}
 
 function getApiOne() {
     var requestUrl = "https://api.openweathermap.org/data/2.5/forecast?lat=33.748997&lon=-84.387985&appid=62b78fd432f4f7c034943f7f3abc8315&units=imperial";
